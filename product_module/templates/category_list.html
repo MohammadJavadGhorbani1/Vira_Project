@@ -1,0 +1,16 @@
+{% extends 'layout.html' %}
+
+{% block title %}
+	دسته بندی ها
+{% endblock %}
+
+{% block content %}
+    <div class="container" style="display: flex ; flex-wrap: wrap ; padding: 50px">
+    {% for category in categories %}
+    	<div style="width: 20% ; border-radius: 5px ; border: 1px dotted blue ; padding: 10px ; text-align: center">
+            <a href="{% url 'category_detail' category.id %}">{{ category.title }}</a>
+        </div>
+    {% endfor %}
+    </div>
+	
+{% endblock %}

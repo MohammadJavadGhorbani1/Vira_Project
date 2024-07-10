@@ -1,12 +1,12 @@
 {% extends 'layout.html' %}
 
 {% block title %}
-	محصولات دسته بندی
+	تگ ها
 {% endblock %}
 
 {% block content %}
-	{% for product in child_categories %}
-        <div class="col-lg-3 col-md-4 col-xs-12 fr">
+	{% for tag in tags %}
+		<div class="col-lg-3 col-md-4 col-xs-12 fr">
                                             <div class="product-card">
                                                 <div class="product-image-area">
                                                     <a href="#" class="product-image">
@@ -30,7 +30,7 @@
                                                         </ins>
                                                     </div>
                                                     <h3 class="product-name">
-                                                        <a href="{% url 'product_details' product.id %}">{{ product.title }}</a>
+                                                        <a href="{% url 'product_details' product.slug %}">{{ product.title }}</a>
                                                     </h3>
                                                     <div class="actions">
                                                         <div class="star-rating">
